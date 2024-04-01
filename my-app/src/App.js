@@ -86,8 +86,6 @@ function App() {
           <p>Poof!</p>
         )}
       </header>
-
-      
     </div>
   );
 }
