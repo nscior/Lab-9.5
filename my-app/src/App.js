@@ -1,5 +1,7 @@
 import './App.css';
 
+const isLoggedIn = true;
+
 const game = {
   title: 'Undertale',
   author: 'Toby Fox',
@@ -66,8 +68,8 @@ function MagicButton() {
   }
   return (
     <div>
-      <h3>This is a magic button.</h3>
-    <button onClick={doMagic}>Magic</button>
+      <h3>This button does magic.</h3>
+      <button onClick={doMagic}>Click Me!</button>
     </div>
   );
 }
@@ -77,9 +79,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <FavoriteGame />
-        <MagicButton />
         <GameRack />
+        {isLoggedIn ? (
+          <MagicButton />
+        ) : (
+          <p>Poof!</p>
+        )}
       </header>
+
+      
     </div>
   );
 }
